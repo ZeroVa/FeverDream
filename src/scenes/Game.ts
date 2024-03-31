@@ -51,7 +51,8 @@ export class Game extends Scene {
           this.children.bringToTop(this.dialogue_text);
           this.dialogue_text.setText(gameObject.dialogue);
           this.time.addEvent({
-            delay: 5000,
+            delay: 3000,
+            loop: false,
             callback: () => {
               if (this.dialogue_text.visible) {
                 this.dialogue_text.setVisible(false);
